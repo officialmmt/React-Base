@@ -1,0 +1,26 @@
+{
+    "sourceFile": "src/todos/reducers.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1713985816346,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1713985879877,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,10 +13,12 @@\n         };\r\n         return state.concat(newTodo);\r\n       }\r\n \r\n-      break;\r\n+    case REMOVE_TODO:\r\n+      const {text} = payload;\r\n+      return state.filter((todo) => todo.text !== payload.text);\r\n \r\n     default:\r\n-      break;\r\n+      return state;\r\n   }\r\n };\r\n"
+                },
+                {
+                    "date": 1713985900823,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,10 +13,12 @@\n       return state.concat(newTodo);\r\n     }\r\n \r\n     case REMOVE_TODO:\r\n-      const { text } = payload;\r\n+      {\r\n+        const { text } = payload;\r\n       return state.filter((todo) => todo.text !== payload.text);\r\n+      }\r\n \r\n     default:\r\n       return state;\r\n   }\r\n"
+                }
+            ],
+            "date": 1713985816346,
+            "name": "Commit-0",
+            "content": "import {CREATE_TODO, REMOVE_TODO} from './actions'\r\n\r\nexport const todos = (state = [], action) => {\r\n  const {type, payload} = action;\r\n  \r\n  switch (type) {\r\n    case CREATE_TODO: {\r\n      const {text} = payload;\r\n      const newTodo = {\r\n        text,\r\n        isComplete: false,\r\n      };\r\n      return state.concat(newTodo)\r\n    }\r\n      \r\n      break;\r\n  \r\n    default:\r\n      break;\r\n  }\r\n}"
+        }
+    ]
+}

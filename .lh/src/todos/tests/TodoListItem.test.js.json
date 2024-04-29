@@ -1,0 +1,26 @@
+{
+    "sourceFile": "src/todos/tests/TodoListItem.test.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1714407637603,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1714407647135,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,2 +1,9 @@\n import { expect } from 'chai';\r\n import { getBorderStyleForDate } from '../TodoListItem';\r\n+\r\n+describe('getBorderStyleForDate', () => {\r\n+  it('returns \"none\" for dates in the last 5 days', () => {\r\n+    const startingDate = new Date();\r\n+    const currentDate = new Date();\r\n+    expect(getBorderStyleForDate(startingDate, currentDate)).to.equal('none');\r\n+  });\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1714407711065,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import { expect } from 'chai';\r\n import { getBorderStyleForDate } from '../TodoListItem';\r\n \r\n describe('getBorderStyleForDate', () => {\r\n-  it('returns \"none\" for dates in the last 5 days', () => {\r\n+  it('returns \"none\" when the date is less than the last 5 days ago', () => {\r\n     const startingDate = new Date();\r\n     const currentDate = new Date();\r\n     expect(getBorderStyleForDate(startingDate, currentDate)).to.equal('none');\r\n   });\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1714407637603,
+            "name": "Commit-0",
+            "content": "import {expect} from 'chai';\r\nimport { getBorderStyleForDate } from '../TodoListItem';\r\n"
+        }
+    ]
+}

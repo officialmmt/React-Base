@@ -1,0 +1,22 @@
+{
+    "sourceFile": "src/todos/tests/selectors.test.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1714407058579,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1714407147988,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,6 +9,10 @@\n       { text: 'Climb the Mountain Everest', isCompleted: false },\r\n     ];\r\n \r\n     const expected = [{ text: 'Say Hello', isCompleted: true }];\r\n+\r\n+    const actual = getCompletedTodos.resultFunc(fakeTodos);\r\n+\r\n+    expect(actual).to.deep.equal(expected);\r\n   });\r\n });\r\n"
+                }
+            ],
+            "date": 1714407058579,
+            "name": "Commit-0",
+            "content": "import { expect } from \"chai\";\r\nimport { getCompletedTodos } from \"../selectors\";\r\n\r\ndescribe('The getCompletedTodos selector', () => { \r\n  it('Returns only completed todos', () => {\r\n    const fakeTodos = [\r\n      {text: 'Say Hello', isCompleted: true},\r\n      {text: 'Say Goodbye', isCompleted: false},\r\n      {text: 'Climb the Mountain Everest', isCompleted: false},\r\n    ]\r\n\r\n    const expected = [{text: 'Say Hello', isCompleted: true},];\r\n  })  \r\n })"
+        }
+    ]
+}

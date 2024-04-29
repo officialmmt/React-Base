@@ -1,0 +1,30 @@
+{
+    "sourceFile": "src/todos/TodoListItem.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 3,
+            "patches": [
+                {
+                    "date": 1713888698007,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1713888832523,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,11 @@\n import React from 'react';\r\n \r\n const TodoItem = ({ todo }) => {\r\n-  return (\r\n-    <li>\r\n-      <input type=\"checkbox\" checked={todo.completed} />\r\n-      {todo.text}\r\n-    </li>\r\n-  );\r\n+  <div className='todo-item-container'>\r\n+    <h3>{todo.text}</h3>\r\n+    <div className='button-container'>\r\n+      <button className='complete-button'>Complete</button>\r\n+      <button className='remove-button'>Remove</button>\r\n+    </div>\r\n+  </div>\r\n };\r\n"
+                },
+                {
+                    "date": 1713888855738,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n const TodoItem = ({ todo }) => {\r\n   <div className=\"todo-item-container\">\r\n     <h3>{todo.text}</h3>\r\n     <div className=\"button-container\">\r\n-      <button className=\"complete-button\">Complete</button>\r\n+      <button className=\"completed-button\">Mark As Completed</button>\r\n       <button className=\"remove-button\">Remove</button>\r\n     </div>\r\n   </div>;\r\n };\r\n"
+                },
+                {
+                    "date": 1713888888605,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,13 @@\n import React from 'react';\r\n \r\n-const TodoItem = ({ todo }) => {\r\n+const TodoListItem = ({ todo }) => {\r\n   <div className=\"todo-item-container\">\r\n     <h3>{todo.text}</h3>\r\n     <div className=\"button-container\">\r\n       <button className=\"completed-button\">Mark As Completed</button>\r\n       <button className=\"remove-button\">Remove</button>\r\n     </div>\r\n   </div>;\r\n };\r\n+\r\n+export default TodoListItem;\r\n"
+                }
+            ],
+            "date": 1713888698007,
+            "name": "Commit-0",
+            "content": "import React from 'react';\r\n\r\nconst TodoItem = ({ todo }) => {\r\n  return (\r\n    <li>\r\n      <input type=\"checkbox\" checked={todo.completed} />\r\n      {todo.text}\r\n    </li>\r\n  );\r\n};"
+        }
+    ]
+}

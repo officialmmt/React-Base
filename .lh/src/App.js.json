@@ -1,0 +1,26 @@
+{
+    "sourceFile": "src/App.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1713887503777,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1713889440561,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,12 @@\n import React from 'react';\n import { hot } from 'react-hot-loader';\n import './App.css';\n+import TodoList from './todos/TodoList';\n \n const App = () => (\n   <div className=\"App\">\n-    <h1>Hello, World!</h1>\n+    <TodoList />\n   </div>\n );\n \n export default hot(module)(App);\n"
+                },
+                {
+                    "date": 1714389644905,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,15 @@\n import React from 'react';\n import { hot } from 'react-hot-loader';\n import './App.css';\n import TodoList from './todos/TodoList';\n+import styled from 'styled-components';\n \n+const AppContainer = styled.div`\n+margin: 1rem;\n+    font-family: Arial, Helvetica, sans-serif;\n+    color: #222222;`;\n+\n const App = () => (\n   <div className=\"App\">\n     <TodoList />\n   </div>\n"
+                }
+            ],
+            "date": 1713887503776,
+            "name": "Commit-0",
+            "content": "import React from 'react';\nimport { hot } from 'react-hot-loader';\nimport './App.css';\n\nconst App = () => (\n    <div className=\"App\">\n        <h1>Hello, World!</h1>\n    </div>\n);\n\nexport default hot(module)(App);"
+        }
+    ]
+}

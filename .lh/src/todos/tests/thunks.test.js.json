@@ -1,0 +1,26 @@
+{
+    "sourceFile": "src/todos/tests/thunks.test.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1714404957040,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1714405034287,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,6 +6,8 @@\n \r\n describe('The load todos thunk', () => {\r\n   it('Dispatch the correct actions in the success scenario', async () => {\r\n     const dispatch = sinon.spy();\r\n+\r\n+    const fakeTodos = [{text: '1'}, {text: '2'}];\r\n   });\r\n });\r\n"
+                },
+                {
+                    "date": 1714405112140,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,6 +8,9 @@\n   it('Dispatch the correct actions in the success scenario', async () => {\r\n     const dispatch = sinon.spy();\r\n \r\n     const fakeTodos = [{ text: '1' }, { text: '2' }];\r\n+    fetchMock.get('http://localhost:8080/todos', fakeTodos);\r\n+\r\n+    fetchMock.reset();\r\n   });\r\n });\r\n"
+                }
+            ],
+            "date": 1714404957040,
+            "name": "Commit-0",
+            "content": "import 'node-fetch';\r\nimport fetchMock from 'fetch-mock';\r\nimport { expect } from 'chai';\r\nimport sinon from 'sinon';\r\nimport { loadTodos} from '../thunks';\r\n\r\ndescribe('The load todos thunk', () => {\r\n  it('Dispatch the correct actions in the success scenario', async () => {\r\n    const dispatch = sinon.spy();\r\n  })\r\n});"
+        }
+    ]
+}

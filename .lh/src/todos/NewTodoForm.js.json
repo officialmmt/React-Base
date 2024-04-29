@@ -1,0 +1,26 @@
+{
+    "sourceFile": "src/todos/NewTodoForm.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1713889115452,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1713889136247,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,7 +2,7 @@\n \r\n const NewTodoForm = (props) => {\r\n   <div className=\"new-todo-form\">\r\n     <input className=\"new-todo-input\" type=\"text\" />\r\n-    <button className=\"new-todo-item\">Add Todo</button>\r\n+    <button className=\"new-todo-item\">Create Todo</button>\r\n   </div>;\r\n };\r\n"
+                },
+                {
+                    "date": 1713889143205,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,4 +5,6 @@\n     <input className=\"new-todo-input\" type=\"text\" />\r\n     <button className=\"new-todo-item\">Create Todo</button>\r\n   </div>;\r\n };\r\n+\r\n+export default NewTodoForm;\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1713889115452,
+            "name": "Commit-0",
+            "content": "import React from 'react'\r\n\r\nconst NewTodoForm = (props) => {\r\n  <div className='new-todo-form'>\r\n\r\n    <input className='new-todo-input' type='text' />\r\n    <button className='new-todo-item'>Add Todo</button>\r\n  </div>\r\n\r\n}"
+        }
+    ]
+}

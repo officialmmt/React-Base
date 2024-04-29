@@ -1,0 +1,34 @@
+{
+    "sourceFile": "src/todos/selectors.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 4,
+            "patches": [
+                {
+                    "date": 1714319427970,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1714319443649,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,3 @@\n export const getTodos = (state) => state.todos;\r\n \r\n-export const getIsLoading = (state) => state.isLoading;\r\n+export const getTodosLoading = (state) => state.isLoading;\r\n"
+                },
+                {
+                    "date": 1714320114796,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,3 @@\n-export const getTodos = (state) => state.todos;\r\n+export const getTodos = (state) => state.todos.data;\r\n \r\n-export const getTodosLoading = (state) => state.isLoading;\r\n+export const getTodosLoading = (state) => state.todos.isLoading;\r\n"
+                },
+                {
+                    "date": 1714322580710,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,9 @@\n+import { createSelector } from \"reselect\";\r\n+\r\n export const getTodos = (state) => state.todos.data;\r\n+export const getTodosLoading = (state) => state.todos.isLoading;\r\n \r\n-export const getTodosLoading = (state) => state.todos.isLoading;\r\n+export const getIncompleteTodos = createSelector(\r\n+  getTodos,\r\n+  (todos) => todos.filter((todo) => !todo.isCompleted)\r\n+)\r\n"
+                },
+                {
+                    "date": 1714327691746,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,4 +5,8 @@\n \r\n export const getIncompleteTodos = createSelector(getTodos, (todos) =>\r\n   todos.filter((todo) => !todo.isCompleted),\r\n );\r\n+\r\n+export const getCompletedTodos = createSelector(getTodos, (todos) =>\r\n+  todos.filter((todo) => todo.isCompleted),\r\n+);\r\n"
+                }
+            ],
+            "date": 1714319427969,
+            "name": "Commit-0",
+            "content": "export const getTodos = (state) => state.todos;\r\n\r\nexport const getIsLoading = (state) => state.isLoading;"
+        }
+    ]
+}

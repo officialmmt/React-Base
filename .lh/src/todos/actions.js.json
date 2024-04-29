@@ -1,0 +1,30 @@
+{
+    "sourceFile": "src/todos/actions.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 3,
+            "patches": [
+                {
+                    "date": 1713984885509,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1713985321331,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,15 @@\n export const CREATE_TODO = 'CREATE_TODO';\r\n+export const createTodo = (text) => ({\r\n+  type: CREATE_TODO,\r\n+  payload: {\r\n+    text\r\n+  }\r\n+})\r\n+\r\n+export const REMOVE_TODO = 'REMOVE_TODO';\r\n+export const removeTodo = (id) => ({\r\n+  type: REMOVE_TODO,\r\n+  payload: {\r\n+    text\r\n+  }\r\n+})\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1714155321125,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n   },\r\n });\r\n \r\n export const REMOVE_TODO = 'REMOVE_TODO';\r\n-export const removeTodo = (id) => ({\r\n+export const removeTodo = (text) => ({\r\n   type: REMOVE_TODO,\r\n   payload: {\r\n     text,\r\n   },\r\n"
+                },
+                {
+                    "date": 1714234005700,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,4 +12,12 @@\n   payload: {\r\n     text,\r\n   },\r\n });\r\n+\r\n+export const COMPLETE_TODO = 'COMPLETE_TODO';\r\n+export const completeTodo = (isComplete) => ({\r\n+  type: COMPLETE_TODO,\r\n+  payload: {\r\n+    isComplete,\r\n+  },\r\n+});\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1713984885509,
+            "name": "Commit-0",
+            "content": "export const CREATE_TODO = 'CREATE_TODO';"
+        }
+    ]
+}
